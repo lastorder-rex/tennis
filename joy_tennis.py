@@ -12,6 +12,10 @@ import calendar
 import os
 import time # Add time module for delays between requests
 
+from dotenv import load_dotenv
+load_dotenv()
+
+
 # Disable SSL warnings
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -551,4 +555,5 @@ if __name__ == "__main__":
         print("\n=== 예약 실행 프로세스가 완료되었습니다. ===")
     else:
         print("예약 데이터 생성 및 실행에 실패했습니다.")
+
 

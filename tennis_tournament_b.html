@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B안 - 테니스 복식 게임 운영 계획</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(255, 154, 86, 0.4);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th {
+            background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        td {
+            padding: 12px 15px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:hover {
+            background-color: #fff8f0;
+            transition: all 0.3s ease;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .phase-box {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .phase-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .phase-title::before {
+            content: "🎾";
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .phase-subtitle {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(253, 203, 110, 0.3);
+        }
+
+        .note {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+
+        .note::before {
+            content: "✓ ";
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .time {
+            font-weight: bold;
+            color: #ff6a88;
+            font-size: 1.1em;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #ff9a56 0%, #ff6a88 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎾 B안 테니스 복식 게임 운영 계획 🎾</h1>
+            <p>Tennis Doubles Tournament Plan - Option B</p>
+        </div>
+
+        <div class="content">
+            <!-- 팀 구성 -->
+            <div class="section">
+                <div class="section-title">📋 팀 구성</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>팀</th>
+                            <th>구성</th>
+                            <th>인원</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>블루팀</strong></td>
+                            <td>A팀 (2경기), B팀 (2경기), C팀 (2경기)</td>
+                            <td>총 6명</td>
+                        </tr>
+                        <tr>
+                            <td><strong>레드팀</strong></td>
+                            <td>X팀 (2경기), Y팀 (2경기), Z팀 (2경기)</td>
+                            <td>총 6명</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 코트 사용 시간 -->
+            <div class="section">
+                <div class="section-title">⏰ 코트 사용 시간</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>코트</th>
+                            <th>사용 시간</th>
+                            <th>총 시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>4번 코트</strong></td>
+                            <td>06:00 ~ 10:00</td>
+                            <td>4시간</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7번 코트</strong></td>
+                            <td>06:00 ~ 08:00</td>
+                            <td>2시간</td>
+                        </tr>
+                        <tr>
+                            <td><strong>8번 코트</strong></td>
+                            <td>06:00 ~ 08:00</td>
+                            <td>2시간</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PHASE 1 -->
+            <div class="section">
+                <div class="phase-box">
+                    <div class="phase-title">PHASE 1: 라운드 로빈 (06:30 - 08:00)</div>
+                    <div class="phase-subtitle">각 팀이 모든 상대팀 한 번씩 대결 | 30분 경기 | 4경기 내기</div>
+                    
+                    <div class="highlight">⚡ 총 9경기 진행 | 각 팀 3경기씩 | 각 경기 1점</div>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>시간</th>
+                                <th>4번 코트</th>
+                                <th>7번 코트</th>
+                                <th>8번 코트</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">06:30 ~ 07:00</td>
+                                <td>블루A vs 레드X</td>
+                                <td>블루B vs 레드Y</td>
+                                <td>블루C vs 레드Z</td>
+                            </tr>
+                            <tr>
+                                <td class="time">07:00 ~ 07:30</td>
+                                <td>블루A vs 레드Y</td>
+                                <td>블루B vs 레드Z</td>
+                                <td>블루C vs 레드X</td>
+                            </tr>
+                            <tr>
+                                <td class="time">07:30 ~ 08:00</td>
+                                <td>블루A vs 레드Z</td>
+                                <td>블루B vs 레드X</td>
+                                <td>블루C vs 레드Y</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- PHASE 2 -->
+            <div class="section">
+                <div class="phase-box">
+                    <div class="phase-title">PHASE 2: 팀 내 자유 로테이션 (08:00 - 09:00)</div>
+                    <div class="phase-subtitle">4번 코트만 사용 | 팀 내에서 자유롭게 선수 선택 및 교체</div>
+                    
+                    <div class="highlight">🏆 2경기 진행 | 더 많은 승수 가능 | 각 경기 1점</div>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>시간</th>
+                                <th>매치업</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">08:00 ~ 08:30</td>
+                                <td>블루팀 2명 vs 레드팀 2명</td>
+                                <td>자유 선택(교체 없음)</td>
+                            </tr>
+                            <tr>
+                                <td class="time">08:30 ~ 09:00</td>
+                                <td>블루팀 2명 vs 레드팀 2명</td>
+                                <td>교체 가능</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- PHASE 3 -->
+            <div class="section">
+                <div class="phase-box">
+                    <div class="phase-title">PHASE 3: 에이스 프레이어 (09:00 - 10:00)</div>
+                    <div class="phase-subtitle">4번 코트 | 우위팀 선수 우선 투표 | 게임 동점 고려 가능</div>
+                    
+                    <div class="highlight">🔥 2경기 진행 | 결승 가능성 | 각 경기 2점</div>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>시간</th>
+                                <th>매치업</th>
+                                <th>특징</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">09:00 ~ 09:30</td>
+                                <td>블루 에이스조 vs 레드 에이스조</td>
+                                <td>프리/게임 샷이 교체 OK</td>
+                            </tr>
+                            <tr>
+                                <td class="time">09:30 ~ 10:00</td>
+                                <td>블루 에이스조 vs 레드 에이스조</td>
+                                <td>진영적 교체 가능</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 최종 점수 계산 -->
+            <div class="section">
+                <div class="section-title">🏅 최종 점수 계산</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>경기 수</th>
+                            <th>경기당 점수</th>
+                            <th>총 배점</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Phase 1 (라운드 로빈)</strong></td>
+                            <td>9경기</td>
+                            <td>1점</td>
+                            <td>9점</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 2 (자유 플레이어)</strong></td>
+                            <td>2경기</td>
+                            <td>1점</td>
+                            <td>2점</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Phase 3 (에이스)</strong></td>
+                            <td>2경기</td>
+                            <td>2점</td>
+                            <td>5점</td>
+                        </tr>
+                        <tr style="background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%); font-weight: bold;">
+                            <td colspan="3">총점</td>
+                            <td>15점</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="note">
+                    블루팀 종점 vs 레드팀 종점 → 우승팀 결정
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🎾 Good Luck & Have Fun! 🎾</p>
+            <p>테니스 복식 게임을 즐기세요!</p>
+        </div>
+    </div>
+</body>
+</html>

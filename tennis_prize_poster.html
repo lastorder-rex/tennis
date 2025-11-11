@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테니스 친선 복식대회 경품</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e40af 0%, #1e40af 50%, #dc2626 50%, #dc2626 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #1e40af;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header h2 {
+            font-size: 1.5em;
+            color: #dc2626;
+            font-weight: normal;
+        }
+
+        .prizes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .prize-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .prize-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .prize-card.all-participants {
+            grid-column: 1 / -1;
+        }
+
+        .category {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .category.all {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+
+        .category.runner-up {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+
+        .category.winner {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        .category.vip {
+            background: linear-gradient(135deg, #ec4899, #db2777);
+        }
+
+        .prize-image {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background: #f9fafb;
+            padding: 20px;
+        }
+
+        .prize-card.all-participants .prize-image {
+            height: 250px;
+        }
+
+        .prize-name {
+            font-size: 1.2em;
+            color: #374151;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .prizes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .header h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎾 테니스 친선 복식대회 🎾</h1>
+            <h2>경품 안내</h2>
+        </div>
+
+        <div class="prizes-grid">
+            <!-- 참가자 전체 -->
+            <div class="prize-card all-participants">
+                <div class="category all">🎁 참가자 전체</div>
+                <img src="https://rylclvdntoelktrameow.supabase.co/storage/v1/object/public/thumbnails/etc/1.PNG" alt="요넥스 그립" class="prize-image">
+                <div class="prize-name">YONEX 그립 테이프</div>
+            </div>
+
+            <!-- 준우승팀 -->
+            <div class="prize-card">
+                <div class="category runner-up">🥈 준우승팀</div>
+                <img src="https://rylclvdntoelktrameow.supabase.co/storage/v1/object/public/thumbnails/etc/2.PNG" alt="요넥스 손목밴드" class="prize-image">
+                <div class="prize-name">YONEX 손목밴드</div>
+            </div>
+
+            <!-- 우승팀 -->
+            <div class="prize-card">
+                <div class="category winner">🏆 우승팀</div>
+                <img src="https://rylclvdntoelktrameow.supabase.co/storage/v1/object/public/thumbnails/etc/3.PNG" alt="스타벅스 카드" class="prize-image">
+                <div class="prize-name">스타벅스 기프트카드(1만원/인당)</div>
+            </div>
+
+            <!-- VIP -->
+            <div class="prize-card" style="grid-column: 1 / -1;">
+                <div class="category vip">⭐ VIP</div>
+                <img src="https://rylclvdntoelktrameow.supabase.co/storage/v1/object/public/thumbnails/etc/4.PNG" alt="요넥스 타월" class="prize-image">
+                <div class="prize-name">YONEX 스포츠 타월</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
